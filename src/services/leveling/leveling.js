@@ -160,7 +160,7 @@ export async function getLevelingConfig(client, guildId) {
       ignoredRoles: [],
       blacklistedUsers: [],
       roleRewards: {},
-      announceLevelUp: true,
+      announceLevelUp: false,
       xpMultiplier: 1
     };
   } catch (error) {
@@ -175,7 +175,7 @@ export async function getLevelingConfig(client, guildId) {
       ignoredRoles: [],
       blacklistedUsers: [],
       roleRewards: {},
-      announceLevelUp: true,
+      announceLevelUp: false,
       xpMultiplier: 1
     };
   }
