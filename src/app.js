@@ -376,7 +376,8 @@ class TitanBot extends Client {
 
       logger.info('✅ Graceful shutdown complete');
   shutdownLog('Bot stopped successfully.');
-      process.exit(0);
+      // Crash-triggered shutdowns exit non-zero so Railway restarts the bot.
+      process.exit(reason === 'UNCAUGHT_EXCEPTION' ? 1 : 0);
     } catch (error) {
       logger.error('Error during graceful shutdown:', error);
       process.exit(1);
